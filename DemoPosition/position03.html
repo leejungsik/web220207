@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <!-- 자손에게 position속성을 absolute키워드로 적용하면 부모에게 height속성을 입력한다.
+        자손의 position속성을 absolute로 적용하면 부모의 position을 relative로 적용한다. -->
+    <style>
+        body > div {
+            width: 400px;
+            height: 100px;
+            border: 3px solid black;
+            position: relative; 
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+            .box:nth-child(1) {
+                background-color: red;
+                left: 10px; top: 10px; 
+            }
+            .box:nth-child(2) {
+                background-color: green;
+                left: 50px; top: 50px; 
+            }
+            .box:nth-child(3) {
+                background-color: blue;
+                left:100px; top: 100px; 
+            }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor amet</h1>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor amet</h1>
+</body>
+</html>

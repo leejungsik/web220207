@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <canvas id="myCanvas">이 브라우져는 canvas를 지원하지 않습니다!</canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.strokeStyle = "rgb(0, 0, 255)";
+        context.fillStyle = "rgba(255, 0, 0, 0.75)";
+        context.beginPath();
+        context.moveTo(60, 30);
+        context.lineTo(100, 90); 
+        context.lineTo(20, 90);
+        context.closePath();
+        context.stroke();
+        context.fill(); 
+    </script>
+</body>
+</html>

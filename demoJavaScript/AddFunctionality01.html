@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        var Point = function (x, y) {
+            this.x = x;
+            this.y = y;
+        }
+        Point.prototype.moveBy = function (deltaX, deltaY) {
+            this.x += deltaX;
+            this.y += deltaY;
+        }
+        Point.prototype.moveTo = function (otherPoint) {
+            this.x = otherPoint.x;
+            this.y = otherPoint.y;
+        }
+
+        var p1 = new Point(100, 200);
+        p1.moveBy(10, 20);
+        alert("moveBy " + p1.x + " , " + p1.y);
+
+        var p2 = new Point(25, 50); 
+        p2.moveTo(p1); 
+        alert("moveTo " + p1.x + " , " + p1.y);
+    </script>
+</body>
+</html>

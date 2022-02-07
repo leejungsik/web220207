@@ -1,0 +1,43 @@
+<httml>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //화살표 사용하기 
+            var funobject = (name, cost) => `${name} 고객님~ ${cost} 결제되었습니다.`
+            console.log( funobject("전우치", 12000) )
+
+            // var func1 = {
+            //     prop: ["안녕","Hi", "Bonjur"],
+            //     country: ["한국","미국","프랑스"],
+            //     print: function(delay = 1000) {
+            //         setTimeout(function() {
+            //             for(let i=0;i<3;i++) {
+            //                 console.log( `${this.prop[i]}은 ${this.country[i]}의 인사말`);
+            //             }
+            //         }, delay)
+            //     }
+            // }
+
+            // func1.print() 
+
+
+            var func2 = {
+                prop: ["안녕","Hi", "Bonjur"],
+                country: ["한국","미국","프랑스"],
+                print: function(delay = 1000) {
+                    setTimeout(() => {
+                        for(let i=0;i<3;i++) {
+                            console.log( `${this.prop[i]}은 ${this.country[i]}의 인사말`);
+                        }
+                    }, delay)
+                }
+            }
+
+            func2.print() 
+
+
+        </script>
+    </body>
+</httml>

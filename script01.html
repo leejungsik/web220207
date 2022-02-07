@@ -1,0 +1,24 @@
+<!DOCTYPE hhtml>
+<html>
+
+<body>
+    <form>
+        <p>
+            <label>이름:
+            <input type="text" id="NameBox"/></label>
+        </p>
+        <input type="button" id="submit" value="전송"/>
+    </form>
+    <div id="thankYouArea"></div>
+    <script type="text/javascript">
+    function sayThankYou() {
+        var userName = document.getElementById("NameBox").value; 
+        var thankYou = document.createElement("p"); 
+        thankYou.textContent = "감사합니다." + userName; 
+        document.getElementById("thankYouArea").appendChild(thankYou); 
+     }
+     document.getElementById("submit").addEventListener("click", sayThankYou);
+    </script>
+
+</body>
+</html>

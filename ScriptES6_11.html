@@ -1,0 +1,20 @@
+<httml>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //클로저 함수 소개 
+           function outerFunc() {
+               var a = 1; 
+
+                function innerFunc() {
+                    var b = 2; 
+                    console.log(a + b); 
+                }
+           }
+
+           outerFunc(); 
+        </script>
+    </body>
+</httml>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        canvas {
+            border: 2px solid darkblue;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas를 사용해 봅시다</h1>
+    <canvas id="myCanvas">이 브라우져는 canvas를 지원하지 않습니다.</canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        var edge = 20;
+        context.fillStyle = "red";
+        context.fillRect(20, 20, canvas.width - 40, canvas.height - 40);
+
+    </script>
+</body>
+</html>

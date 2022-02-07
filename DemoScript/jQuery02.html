@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="Scripts/jquery-2.1.1.js"></script>
+</head>
+<body>
+    <form>
+        <p><label>이름: <input type="text" id="NameBox" /></label></p>
+        <input type="button" id="submit" value="전송" />
+    </form>
+    <div id="thankYouArea"></div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //이벤트는 붙이는 경우는  Bind()메서드 또는 아래와 같이 연결한다. 
+            $("#submit").click(
+                function () {
+                    var userName = $("#NameBox").val();
+                    $("#thankYouArea").replaceWith("<p>Thank you " + userName + "</p>");
+                }); 
+        });
+    </script>
+</body>
+</html>

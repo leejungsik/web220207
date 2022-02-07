@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        //자바스크립트는 모든 것이 객체다! 하지만 클래스가 없는 약점에도 
+        //불구하고 아래와 같이 은폐성을 구현 할 수 있다. 
+        var Person = function (name, age) {
+            //private속성을 생성자 안에 숨긴다(일부러 this를 붙이지 않음)
+            var _name, _age;
+            //public한 메서드를 생성자 안에 추가한다.  
+            this.getName = function () {
+                return _name;
+            }
+            this.setName = function () {
+                _name = name;
+            }
+            this.getAge = function () {
+                return _age;
+            }
+            this.setAge = function (age) {
+                if (age > 0 && age < 100)
+                    _age = age;
+            }
+            //생성자 로직
+            _name = name;
+            this.setAge(age);
+        }
+
+        Person.prototype = 
+        {
+            toString: function () {
+                return this.getName() + " : " + this.getAge();
+            }
+        }
+
+        //아래와 같이 호출한다.
+        var person1 = new Person("전우치", 30);
+        alert(person1.toString()); 
+        alert(person1._name);  //undefined출력 
+    </script>
+</body>
+</html>

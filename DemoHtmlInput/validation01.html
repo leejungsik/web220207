@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="scoreForm" method="post" action="test.aspx" onsubmit="return validateForm();">
+        <div id="scoreField" class="field">
+            <input id="score" name="score" type="number" />
+            <label for="score">점수:</label>
+        </div>
+        <input type="submit" value="전송" />
+    </form>
+
+    <script>
+        //숫자만 넘어가도록 지정했다. 
+        function isAnInteger(text) {
+            var intTestRegex = /^\s*(\+)?\d+\s*$/;
+            return String(text).search(intTestRegex) != -1;
+        }
+        function validateForm() {
+            if (!isAnInteger(document.getElementById('score').value))
+                return false; 
+            return true; 
+        }
+    </script>
+</body>
+</html>

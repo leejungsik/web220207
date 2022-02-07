@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+<script>
+    //기본 생성자
+    var Person = function (name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    //기본 prototype
+    Person.prototype = {
+        haveBirthday: function () {
+            this.age++;
+        }
+    };
+    //파생 생성자
+    var Student = function (name, age, subject) {
+        this.name = name;
+        this.age = age;
+        this.subject = subject;
+    }
+
+    //기본 프로토타입과 같은 동일한 객체로 파생 프로포타입을 셋팅한다. 
+    //그리고 올바른 생성자를 사용하는 파생 프로토타입을 리셋한다. 
+    Student.prototype = new Person();
+    Student.prototype.constructor = Student;
+    //파생 객체를 생성하고 객체에 정의된 어떤 메서드를 호출한도 또는 부모에 있는 하나
+    //자바스크립트틑 프로토타입 체인을 사용한다. 
+    var aStudent = new Student("박문수", 40, "컴공");
+    aStudent.subject = "전산";
+    aStudent.haveBirthday();
+
+    alert(aStudent.name + " : " + aStudent.age + " : " + aStudent.subject); 
+</script>
+</body>
+</html>

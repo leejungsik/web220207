@@ -1,0 +1,30 @@
+<httml>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //객체 리터럴 개선 
+            var name = "전우치"
+            var code = "17"
+            var major = "소프트웨어"
+
+            var print = function() {
+                console.log(`${this.name}은 ${this.major}과 ${this.code}학번 입니다.`)
+            }
+            
+            var student = {name, code, major, print}
+
+            student.print() 
+
+            //스프레드 연산자
+            var atoc = ["A","B","C"]
+            var dtoe = ["D","E"]
+
+            var atoe = [...atoc, ...dtoe]
+
+            console.log(atoe)
+
+        </script>
+    </body>
+</httml>

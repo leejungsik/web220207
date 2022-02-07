@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        var Account = function (id, name) {
+            this.id = id;
+            this.name = name;
+            this.balance = 0;
+            this.numTransactions = 0;
+        };
+
+        //프로토타입을 통해 코드는  공유하고 데이터는 각 객체에 저장한다. 
+        Account.prototype = {
+            deposit: function (amount) {
+                this.balance += amount;
+                this.numTransactions++;
+            },
+            withdraw: function (amount) {
+                this.balance -= amount;
+                this.numTransactions++;
+            },
+            displayDetails: function () {
+                alert(this.id + ", " +
+                    this.name + " 잔고 " +
+                    this.balance + " ( " +
+                    this.numTransactions + " 트랜잭션)");
+            }
+        };
+
+        var acc1 = new Account(1, "김길동");
+        var acc2 = new Account(2, "홍길동");
+        acc1.deposit(1500);
+        acc1.displayDetails();
+        acc2.deposit(2000);
+        acc2.withdraw(500);
+        acc2.displayDetails(); 
+
+    </script>
+</body>
+</html>

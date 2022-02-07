@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        #parent {
+            perspective: 400px;
+            perspective-origin: -10px -10px;
+        }
+        #child1 {
+            background-color: orange;
+            position: absolute;
+            transform-origin: 0px 0px;
+            transform: rotateY(30deg) 
+        }
+        #child2 {
+            background-color: orange;
+            position: absolute;
+            transform-origin: 0px 0px;
+            transform: rotateY(30deg) translate(250px);
+        }
+
+    </style>
+</head>
+<body>
+    <p>이번에는 3d 관련 데모들을 살펴봅니다. </p>
+    <div id="parent">
+        <div id="child1">첫번째 자식 요소</div>
+        <div id="child2">두번째 자식 요소</div>
+    </div>
+</body>
+</html>

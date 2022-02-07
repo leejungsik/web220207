@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        //생성자를 사용한 객체 초기화 
+        var Account = function (id, name) {
+            this.id = id;
+            this.name = name;
+            this.balance = 0;
+            this.numTransactions = 0; 
+        };
+
+        var acc1 = new Account(1, "김길동");
+        var acc2 = new Account(2, "홍길동");
+
+        alert(acc1.id + " : " + acc1.name); 
+
+    </script>
+</body>
+</html>

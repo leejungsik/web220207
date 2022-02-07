@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <!-- overflow: hidden을 사용하면 
+          부모의 범위를 벗어나면 숨긴다. 
+        overflow: scroll을 하면 범위를 벗어나는 부분은 스크롤을 할 수 있다. 
+        특정 방향으로면 스크롤 할거면 overflow-y: scroll;등을 사용한다. 
+        -->
+    <style>
+        body > div {
+            width: 400px;
+            height: 100px;
+            border: 3px solid black;
+            position: relative; 
+            overflow-y: scroll;  
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+            .box:nth-child(1) {
+                background-color: red;
+                left: 10px; top: 10px; 
+            }
+            .box:nth-child(2) {
+                background-color: green;
+                left: 50px; top: 50px; 
+            }
+            .box:nth-child(3) {
+                background-color: blue;
+                left:100px; top: 100px; 
+            }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor amet</h1>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor amet</h1>
+</body>
+</html>

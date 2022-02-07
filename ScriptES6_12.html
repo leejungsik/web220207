@@ -1,0 +1,23 @@
+<httml>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //올바른 클래저 소개  
+           function outFunc() {
+               var a = 1; 
+
+                function inFunc() {
+                    return a++; 
+                }
+
+                return inFunc; 
+           }
+
+           var testFunc = outFunc(); 
+           console.log(testFunc()); 
+           console.log(testFunc()); 
+        </script>
+    </body>
+</httml>

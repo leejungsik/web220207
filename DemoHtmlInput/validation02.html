@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="scoreForm" method="post" action="test.aspx" onsubmit="return validateForm();">
+        <input id="penalties" name="penalties" type="text" />
+        <label for="penalties">패널티:</label>
+        <br />
+        <input type="submit" value="전송" />
+    </form>
+
+    <script>
+        //input태그에 required속성은 whitespace를 걸러내지 못한다!
+        //그래서 공백문자가 아닌 경우를 체크하는 아래의 코드로 처리한다. 
+        function isSignificant(text) {
+            var notWhitespaceTestRegex = /[^\s]{1,}/;
+            return String(text).search(notWhitespaceTestRegex) != -1;
+        }
+        function validateForm() {
+            if (!isSignificant(document.getElementById('penalties').value))
+                return false;
+            return true; 
+        }
+    </script>
+</body>
+</html>

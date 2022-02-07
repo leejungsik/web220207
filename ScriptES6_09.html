@@ -1,0 +1,31 @@
+<httml>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //렉시컬 스코프 
+            //전역 지역의 전역변수 
+            var a = 1; 
+
+            function funcA() {
+                var a = 3; 
+                console.log(a);
+                console.log(b); 
+                return 2; 
+            }
+
+            function funcB() {
+                var b = 4; 
+                console.log(a);
+                console.log(b);
+                return 2; 
+            }
+
+            console.log(a);
+            console.log(b);
+            console.log(funcA()); 
+
+        </script>
+    </body>
+</httml>

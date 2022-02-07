@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script >
+        var MyNamespace = {
+            myFunction1: function(someParameters) {
+                document.write(someParameters);  
+            },
+            myFunction2: function(someParameters) {
+                document.write(someParameters);  
+            }, 
+            message: "새로운 메세지"
+        }
+
+        //아래와 같이 전체 이름으로 접근한다. 
+        MyNamespace.myFunction1('aa'); 
+        MyNamespace.myFunction2('bb'); 
+        MyNamespace.message = 'cc'; 
+        alert(MyNamespace.message); 
+    </script>
+</body>
+</html>

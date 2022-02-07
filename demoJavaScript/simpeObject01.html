@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        var employee1 = new Object();
+        employee1.name = "전우치";
+        employee1.age = 30;
+        employee1.salary = 200000;
+        employee1.payRise = function (amount) {
+            this.salary += amount;
+            return this.salary; 
+        }
+
+        employee1.payRise(150000);
+        alert('인상된 월급:' + employee1.salary); 
+
+        //Object 리터럴 표기
+        var employee2 = {
+            name: "이순신",
+            age: 40,
+            salary: 300000,
+            payRise: function (amount) {
+                this.salary += amount;
+                return this.salary;
+            },
+            displayDetails: function () {
+                alert(this.name + " 이고 " + this.age + " 살이고 그리고 월급 " + this.salary); 
+            }
+        };
+
+        employee2.displayDetails(); 
+    </script>
+</body>
+</html>

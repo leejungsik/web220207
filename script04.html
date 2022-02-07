@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+           var date = new Date(); 
+           var hour = date.getHours(); 
+           
+           if (hour < 11) {
+               alert('아침 먹을 시간');
+           } else {
+               if (hour < 15) {
+                   alert('점심 먹을 시간');
+               } else {
+                   alert('저녁 먹을 시간'); 
+               }
+           }
+
+           var input = Number(prompt('숫자를 입력', '숫자'));
+
+           switch(input % 2) {
+               case 0:
+                   alert('짝수 입니다.');
+                   break; 
+                case 1:
+                    alert('홀수 입니다.');
+                    break; 
+                default:
+                    alert('숫자가 아닙니다.');
+                    break; 
+
+           }
+
+        </script>
+
+
+    </body>
+</html>
