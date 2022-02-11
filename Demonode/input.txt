@@ -1,2 +1,3 @@
-Let's understand what is a callback function.
-What the HELL is it?
+이 파일을 읽으면
+다음 라인들이
+있습니다. 
