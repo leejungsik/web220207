@@ -1,0 +1,102 @@
+#최신 웹기술 관련 명령어들
+
+*웹브라우져별로 HTML5 지원 점수 
+http://html5test.com/index.html
+
+*브라우져별 어떤 버전부터 기능이 지원되는지를 검색하는 경우 
+http://caniuse.com/
+
+*한국의 웹브라우져 점유율
+https://gs.statcounter.com/browser-market-share/all/south-korea/#monthly-202012-202201
+
+
+*프론트엔드와 백엔드 그리고 LAMP, MEAN스택 설명 
+https://www.youtube.com/watch?v=md1-g-n-pag&list=PLq8wAnVUcTFVWq7BUX9kz1mdoeQKEcL9Q
+
+*가장 먼저 설치할 개발 도구는 Visual Studio Code
+http://code.visualstudio.com 
+(윈도우용, 맥용, 리눅스용을 전부 무료로 제공한다.)
+
+*리엑트 설치 
+1. nodejs.org/en/ 에서 node.js를 먼저 설치해야 한다. 
+2. node -v 로 버전 정보를 볼 수 있다. 
+3. npx create-react-app my-app. 로 앱을 생성할 수 있다. 생성된 폴더로 이동한다. cd my-app 
+4. npm start 로 시작할 수 있다. 
+
+
+*Angular Framework 
+앵귤러의 탄생배경과 SPA와 DOM에 대한 개념 설명 
+https://www.youtube.com/watch?v=3K1AhCSW2iM&list=PLq8wAnVUcTFWl-3u5aH7G-5DQuPJP4sUw
+
+
+*Angular 설치(우선 node.js가 설치되어 있어야 하고, 그리고 타입스크립트를 설치해야 한다.)
+$ npm install -g typescript
+$ npm install -g @angular/cli
+
+새로운 Angular프로젝트 만들기 
+$ ng new <프로젝트 이름> 
+
+생성된 프로젝트를 실행하기 
+$ cd <프로젝트 이름>
+$ ng serve (--open, --port ..)
+
+생성된 프로젝트는 기본 포트로 4200번을 사용한다. 
+
+
+*Three.js의 구조를 잘 설명한 문서 
+https://threejs.org/manual/#en/fundamentals
+(렌더링이나 텍스쳐, 메티리얼등이 미리 보기를 통해 자세하게 설명되어 있다.) 
+
+
+*node.js 관련 
+먼저 node.js를 설치한 후에 아래와 같이 필요한 모듈을 설치할 수 있다. 
+https://nodejs.org/en/
+
+$ npm install express
+
+설치가 필요한 패키지를 아래와 같이 생성한다.
+파일이름은 package.json 을 사용한다. 
+{
+  "name": "express-tutorial",
+  "version": "1.0.0",
+  "dependencies": 
+  {
+    "express": "~4.13.1",
+    "ejs": "~2.4.1"    
+  }
+}
+
+위의 셋팅을 아래와 같이 실행한다. 
+npm install
+
+버전이 낮아서 경고가 출력되면 아래와 같이 업데이트한다.
+npm audit fix --force
+
+
+*Java 
+점프 투 자바: 문법을 정리한 책 
+https://wikidocs.net/
+
+Java SDK를 받아서 설치하기 
+https://www.oracle.com/kr/java/technologies/javase/javase-jdk8-downloads.html
+
+스프링 부트의 AOP
+https://www.youtube.com/watch?v=y2JkXjOocZ4
+
+
+*파이썬 설치
+http://python.org 
+
+
+*ASP.NET Core관련 
+비주얼스튜디오 커뮤니티 에디션을 설치한다. 
+https://visualstudio.microsoft.com/ko/thank-you-downloading-visual-studio-mac/?sku=communitymac&rel=16
+
+웹프로젝트를 생성한다. 
+dotnet new webapp -o aspnetcoreapp
+
+
+웹프로젝트를 실행한다. 
+cd aspnetcoreapp
+dotnet watch run
+
