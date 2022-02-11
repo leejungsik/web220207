@@ -1,0 +1,7 @@
+<div>{{ title }}</div>
+<div>{{ num }}</div>
+<input type='button' value='서버에 갔다왔다' (click)='ifIwereGoToServer()'/>
+<br><br>
+<div *ngIf="all.length > 0">
+  <div *ngFor="let item of all">서버에 갔다왔다고 한 데이터 : {{item}}</div>
+</div>
